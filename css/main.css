@@ -1,0 +1,166 @@
+/* 
+object:聚划算
+author:eJay Young
+date:2016-05-13 
+ */
+
+*{margin:0;padding:0;list-style: none;text-decoration: none;}
+html{height:100%;font-size: 32px;font-family: '微软雅黑';}
+
+@font-face{
+	font-family: FZZCHJW;
+	src:url('../font/FZZCHJW.ttf');
+}
+@font-face{
+	font-family: ARLRDBD;
+	src:url('../font/ARLRDBD.TTF');
+}
+/*body{overflow-y:hidden;}*/
+header{height:1.594rem;background:-webkit-linear-gradient(#fff,#ebebeb);position: relative;text-align: center;line-height: 1.1rem;}
+.backbtn{position: absolute;top:50%;margin-top: -0.5rem;left:0.3125rem;}
+.backbtn img{width:2.031rem;height:1rem;display:flex;align-items: center;}
+header .logo{font-family: FZZCHJW;color:#d51938;font-size: 0.625rem;}
+/*.logo{width:5.875rem;height:1.375rem;position: absolute;top:50%;left:50%;margin-top: -0.6875rem;margin-left: -2.9375rem;}*/
+
+/*聚划算首页——商品团B*/
+.classifybtn{margin-right: 0.3125rem;position: absolute;top:50%;margin-top: -0.453rem;right:0.3125rem;}
+.classifybtn img{width:1.53rem;height:0.906rem;display:flex;align-items: center;}
+.subnav{width:10rem;height:1.25rem;}
+.subnav a{font-size: 0.375rem;color:#999;border-right:0.0156rem solid #ccc;border-bottom:0.0156rem solid #ccc;float: left;width:25%;text-align: center;line-height: 1.25rem;box-sizing: border-box;}
+.subnav a:last-child{border-right:none;}
+.subnav .show{color:#dd4365;}
+
+/*聚划算商品团B列表*/
+.goodsList li{width:10rem;height:3.125rem;border-bottom: 1px solid #ccc;display: flex;}
+.goodsList li .thumb{border:1px solid #ccc;padding:0.125rem;background: #fff;margin:0.3125rem;}
+.goodsList li img{width:3.5rem;height:2.25rem;}
+.goodsList li .goodsDetail{position: relative;display: flex;flex-direction: column;margin:0.3125rem;justify-content: space-around;}
+.goodsList li .brief{font-size: 0.4375rem;word-wrap: break-word;margin-right: 0.781rem;height:1.125rem;overflow: hidden;}
+.goodsList li .brief em{font-style: normal;color:#c3213c;}
+.goodsList li .curPrice{font-size: 0.375rem;color:#c3213c;}
+.goodsList li .curPrice em{font-size: 0.5rem;font-style: normal;font-weight: bold;}
+.goodsList li span:last-child{font-size: 0.3125rem;color:#999;text-decoration: line-through;}
+.goodsList li .goodsDetail p.price{line-height: 0.5rem;}
+.goodsList li .goodsDetail p.buy{font-size: 0.281rem;color:#999;}
+
+.goodsList li .goodsDetail  img{width:1.25rem;height:0.46875rem;}
+/* 生活团--类目展开 */
+header span{font-size: 0.46875rem; }
+
+/* 生活团--分类--类目浏览/区域选择 */
+.classifyBox{width:100%;height:100%;background: rgba(0,0,0,.3);position: absolute;top:0;left:0;}
+.container{width:8.75rem;height:100%;position: absolute;right:0;background: #333;font-size: 0.4375rem;}
+.classifyBox .container .selectBtn{margin:0.3125rem;color:white;display: flex;border-bottom:0.03125rem solid #404040;}
+.classifyBox .container .selectBtn span{flex:1 1 auto;text-align: center;padding:0.4688rem;}
+.classifyBox .container .selectBtn .selected{border-bottom:0.0781rem solid #fff;}
+.classifyBox .container .classifyContainer{display: flex;}
+.classifyBox .container .classifyContainer ul{flex:1 1 auto;margin-left: 0.9375rem;color:#aaa;}
+.classifyBox .container .classifyContainer li{line-height: 1.25rem;}
+.classifyBox .container .classifyContainer li:active{color:#eee;}
+
+.classifyBox .container .areaSelect{display: none;}
+.classifyBox .container .areaSelect .selectedCity{height:1.25rem;position: relative;margin-left:0.3125rem;margin-right:0.3125rem;color:#999;line-height: 1.25rem;}
+.classifyBox .container .areaSelect .selectedCity span{margin-left: 0.625rem;}
+.classifyBox .container .areaSelect .selectedCity .change{float: right;}
+.classifyBox .container .areaSelect .selectedCity .change img{width:0.281rem;height:0.375rem;margin-left:0.3125rem;}
+.classifyBox .container .areaSelect ul{color:#999;display: flex;flex-wrap: wrap;flex-direction: column;height:12.125rem;margin-left: 0.9375rem;}
+.classifyBox .container .areaSelect ul li{line-height: 1.25rem;}
+/* 城市选择 */
+.curCity{height:1.40625rem;background: #f8f8f8;font-size: 0.46875rem;position: relative;line-height:1.40625rem; }
+.curCity span{margin-left: 0.3125rem;}
+.curCity span img{width:0.397rem;height:0.4375rem;vertical-align: middle;margin-right: 0.344rem;}
+.curCity .selected{width:0.422rem;height:0.4844rem;position: absolute;right:1.5625rem;top:50%;margin-top: -0.2422rem;}
+.cityList ul li:first-child{height:0.9375rem;line-height: 0.9375rem;background: #eee;color:#999;font-size: 0.40625rem;padding-left: 0.3125rem;border:none;}
+.cityList ul li{height:1.40625rem;border-top:0.015625rem solid #ccc;font-size: 0.46875rem;line-height:1.40625rem;padding-left: 0.9375rem;}
+
+
+/* 商品团--频道首页 */
+.brandGroup li{width:10rem;height:4.0625rem;border-bottom:0.0156rem solid #ccc;display:flex;align-items: center;}
+.brandGroup li .brandlogo{width:3.4375rem;height:3.125rem;text-align: center;display: flex;justify-content: space-between;flex-direction: column;flex:1 1 auto;align-items: center;}
+.brandGroup li .brandlogo img{width:1.953rem;height:0.922rem;}
+.brandGroup li .brandlogo p:first-child{font-family:FZZCHJW;font-size: 0.5rem;color:#c7223d;line-height: 0.625rem; }
+.brandGroup li .brandlogo p:nth-child(2){font-size: 0.375rem;color:#666;}
+.brandGroup li .brandlogo .discount{color:#c7223d;position: relative;width:2.2rem;height:0.781rem;font-size: 0.375rem;}
+.brandGroup li .brandlogo .discount strong{font-family: ARLRDBD;color:#c7223d;font-size: 0.781rem;margin-right: 0.2344rem;}
+.brandGroup li .brandlogo .discount .global{color:#999;position:absolute;top:-0.1rem;right: 0; }
+.brandGroup li .brandPic{position: relative;margin-right: 0.3125rem;width:6.281rem;}
+.brandGroup li .brandPic img{width:6.281rem;height:3.14rem;}
+.brandGroup li .brandPic span{height:0.625rem;background: rgba(0,0,0,0.5);font-size: 0.375rem;line-height: 0.625rem;position: absolute;bottom: 0;display: block;color:#fff;text-indent:0.1875rem;width:100%;}
+
+/* 品牌团--商品列表 */
+.brandBigPic{position: relative;}
+.brandBigPic img{width:10rem;height:5rem;}
+.brandBigPic span{height:0.625rem;background: rgba(0,0,0,0.7);font-size: 0.375rem;line-height: 0.625rem;position: absolute;bottom: 0;display: block;color:#fff;text-indent:0.1875rem;width:100%;}
+
+.logo_discount{background: -webkit-linear-gradient(top,#fff 0,#fff 78%,#eee);display: flex;justify-content: space-between;padding:0.281rem;}
+.logo_discount img{width:1.953rem;height:0.922rem; }
+.logo_discount .discount{color:#c7223d;position: relative;width:2.2rem;height:100%;font-size: 0.375rem;display: inline-block;}
+.logo_discount .discount strong{font-family: ARLRDBD;color:#c7223d;font-size: 0.781rem;margin-right: 0.2344rem;}
+.logo_discount .discount .global{color:#999;position:absolute;top:-0.1rem;right: 0; } 
+.goodsList .brand img{width:2.265rem;height:2.484rem;}
+
+
+
+
+
+
+
+/* 首页banner */
+.banner img{width:10rem;height:4.172rem;}
+.banner ul{overflow: hidden;display: flex;justify-content: center;}
+.banner li{width:0.156rem;height:0.156rem;border-radius: 50%;background: #a9a9a9; margin-left: 0.156rem;float: left; }
+.banner li.on{background: #ff4300;}
+
+.nav{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-around;width:9.375rem;margin:0.656rem auto 0;}
+.nav span{width:1.25rem;text-align: center;font-size: 0.344rem;color:#999;line-height: 0.625rem;}
+.nav span img{width:1.25rem;height:1.25rem;}
+
+.clear{clear:both;}
+.hotList{width:9.375rem;margin:0 auto;position: relative;}
+.hotTitle{height:0.4688rem;margin-top: 0.9375rem;}
+
+.hotTitle span:nth-child(1){font-size: 0.4688rem;border-left:0.0625rem solid #d51938;padding-left: 0.3125rem; float: left;}
+.hotTitle span:nth-child(2){font-size: 0.4688rem;float: right;}
+.hotList .blank{width:100%;height:0.39rem;border-bottom:0.0625rem solid #dcdcdc;}
+.hotList ul{margin-top: 0.484rem;}
+.hotList ul li{height:1.89rem;background: #f4f4f4;color:#999;display: flex;flex-direction: row;align-items: center;margin-bottom:0.3125rem; }
+.hotList ul li strong{font-size: 0.5625rem;color:white;height:100%;width:0.9375rem;text-align: center;line-height:1.89rem;display: block;}
+.hotList ul li img{width:2.8125rem;height:1.89rem;}
+.hotList li span{font-size: 0.375rem;}
+.hotList li .goodsData{width:5.625rem;padding:0.3125rem;display: flex;justify-content: space-between;}
+.hotList li .discount{width:2.5rem;line-height: 0.375rem;}
+.hotList li .discount span em{text-decoration: line-through;}
+.hotList li .price{float:right;font-size: 0.468rem;color:#d51938;display: flex;align-items: center;}
+.hotList li .price em{font-style: normal;}
+.hotList li .price img{width:0.203rem;height:0.468rem;margin-left: 0.281rem;}
+
+.hotList .top1 strong{background:#e00202; }
+.hotList .top2 strong{background:#ff4800; }
+.hotList .top3 strong{background:#ff7300; }
+.hotList .top4 strong{background:#ff9d00; }
+.hotList .top5 strong{background:#ffa800; }
+.hotList .top6 strong{background:#ffb400; }
+.hotList .top7 strong{background:#ffba00; }
+.hotList .top8 strong{background:#fcd000; }
+.hotList .top9 strong{background:#ffd719; }
+.hotList .top10 strong{background:#ffe152;}
+
+.listmore{margin-bottom:0.3125rem;}
+.tabmore{margin-bottom:0.46875rem;}
+.more{width:100%;height:1.25rem;background: #f5f5f5;color:#666;font-size: 0.4375rem;text-align:center;line-height:1.25rem;position: relative; }
+.group .more img{width:0.203rem;height:0.468rem;position: absolute;right:0.3125rem;top:50%;margin-top: -0.19rem;}
+
+.show{color:#d51942;}
+.group{width:9.375rem;margin:0 auto;display: flex;flex-wrap: wrap;}
+.group img{width:2.344rem;height:5.5rem;}
+.group table{width:7.0rem;font-size: 0.40625rem;color:#999;height:5.5rem;border-collapse:collapse;border:none;margin-bottom: 0.3125rem;}
+.group table td{border:1px solid #ccc;text-align: center;width:2.344rem;}
+
+.client{width:9.375rem;height:2.5rem;margin:0 auto;display: flex;justify-content: center;margin-bottom: 0.469rem;}
+.client div{width:3.125rem;height:2.5rem;font-size: 0.375rem;color:#999;display: flex;align-items: center;flex-direction: column;border:1px solid #ccc;justify-content: space-around;}
+.client div img{width:0.78125rem;height:0.78125rem;}
+footer{width:10rem;height:1.406rem;background: #f8f8f8;font-size: 0.406rem;line-height: 1.406rem;}
+footer .log-reg{float: left;margin-left: 0.469rem;}
+footer .log-reg span{margin-right:0.766rem;}
+footer .back2top{float: right;margin-right: 0.453rem;}
+footer .back2top span{margin-right: 0.3125rem;}
